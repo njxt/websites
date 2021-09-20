@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>robert &#60;/3</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+        <link rel="shortcut icon" type="image/png" href="assets/img/favicon.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<!-- Clock -->
+
+        <link rel="stylesheet" href="assets/css/clock.css">
+
+
+
+
+</head>
+<body>
+<!-- Clock -->
+<div id="clock"></div>
+
+<div class="main">
+	<h1> robert's website</h1><br><br>
+	<a href="https://cardanoscan.io/address/01750514159b9f0901241ac7e60c1c5637d21c080542e88448f9b8325e750514159b9f0901241ac7e60c1c5637d21c080542e88448f9b8325e"><h2>ADA wallet</h2></a><br>
+	<a href="https://www.instagram.com/zidaru_robert/"><h2 class="gram">gram</h2></a> <h2>/</h2> <a href="https://www.instagram.com/damnedrobert/"><h2 class="gram">gram v2</h2></a>
+</div>
+
+<p class="right-bottom">robert &#60; 3</p>
+
+<!-- Music -->
+<audio autoplay loop=infinite>
+    <source src="assets/music/music.oggs" type="audio/oggs">
+    <source src="assets/music/song.mp3" type="audio/mp3">
+
+<!-- Javascript -->
+        <script src="assets/js/noise.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
+        <script>
+            VANTA.HALO({
+            el: "body",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00
+            })
+        </script>
+        <script language="JavaScript">
+ 
+//////////F12 disable code////////////////////////
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+           //alert('No F-12');
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+/////////////////////end///////////////////////
+ 
+ 
+//Disable right click script 
+//visit http://www.rainbow.arch.scriptmania.com/scripts/ 
+var message="Sorry, right-click has been disabled"; 
+/////////////////////////////////// 
+function clickIE() {if (document.all) {(message);return false;}} 
+function clickNS(e) {if 
+(document.layers||(document.getElementById&&!document.all)) { 
+if (e.which==2||e.which==3) {(message);return false;}}} 
+if (document.layers) 
+{document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
+else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
+document.oncontextmenu=new Function("return false") 
+// 
+function disableCtrlKeyCombination(e)
+{
+//list all CTRL + key combinations you want to disable
+var forbiddenKeys = new Array('a', 'n', 'c', 'x', 'v', 'j' , 'w');
+var key;
+var isCtrl;
+if(window.event)
+{
+key = window.event.keyCode;     //IE
+if(window.event.ctrlKey)
+isCtrl = true;
+else
+isCtrl = false;
+}
+else
+{
+key = e.which;     //firefox
+if(e.ctrlKey)
+isCtrl = true;
+else
+isCtrl = false;
+}
+//if ctrl is pressed check if other key is in forbidenKeys array
+if(isCtrl)
+{
+for(i=0; i<forbiddenKeys.length; i++)
+{
+//case-insensitive comparation
+if(forbiddenKeys[i].toLowerCase() == String.fromCharCode(key).toLowerCase())
+{
+alert('Key combination CTRL + '+String.fromCharCode(key) +' has been disabled.');
+return false;
+}
+}
+}
+return true;
+}
+ 
+//ctrl+u not allowed
+document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+             e.keyCode === 86 || 
+            (e.keyCode === 67 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+            alert('Not allowed.');
+            return false;
+        } else {
+            return true;
+        }
+};
+ 
+</script>
+
+
+
+<script>
+function currentTime() {
+  var date = new Date(); /* creating object of Date class */
+  var hour = date.getHours();
+  var min = date.getMinutes();
+  var sec = date.getSeconds();
+  hour = updateTime(hour);
+  min = updateTime(min);
+  sec = updateTime(sec);
+  document.getElementById("clock").innerText = hour + " : " + min + " : " + sec; /* adding time to the div */
+    var t = setTimeout(function(){ currentTime() }, 1000); /* setting timer */
+}
+
+function updateTime(k) {
+  if (k < 10) {
+    return "0" + k;
+  }
+  else {
+    return k;
+  }
+}
+
+currentTime(); /* calling currentTime() function to initiate the process */
+</script>
+
+    </body>
+</html>
